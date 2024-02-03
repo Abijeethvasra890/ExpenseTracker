@@ -1,0 +1,9 @@
+header{
+    background: black;
+    color: wheat;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: flex-start;
+    font-size: larger;
+}
