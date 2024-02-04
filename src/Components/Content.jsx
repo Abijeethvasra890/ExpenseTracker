@@ -8,7 +8,7 @@ const Content = () => {
     const [expense, setExpense] = useState(0)
     const [savings, setSavings] = useState(0)
     const [balance, setBalance] = useState(0)
-    const [expenses, setExpenses] = useState({})
+    const [expenses, setExpenses] = useState([])
 
   return (
     <div>
@@ -18,6 +18,7 @@ const Content = () => {
             expense={expense}
             savings={savings}
             balance={balance}
+            setBalance={setBalance}
             />
          <Expenses 
             expenses = {expenses}

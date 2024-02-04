@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Expenses from './Expenses'
 import '../styles/basicInfo.css'
 
-const BasicInfo = ({income, expense, savings, balance, setIncome}) => {
+const BasicInfo = ({income, expense, savings, balance,setBalance, setIncome}) => {
    
     const [newIncome, setnewIncome] = useState(0)
     const [incomeModal, setIncomeModal] = useState(false)
@@ -12,8 +12,9 @@ const BasicInfo = ({income, expense, savings, balance, setIncome}) => {
     }
 
     const handlesetIncome = () =>{
-        console.log('hi')
+       
         setIncome(newIncome)
+        setBalance(newIncome)
         setIncomeModal(false)
     }
 
@@ -41,14 +42,17 @@ const BasicInfo = ({income, expense, savings, balance, setIncome}) => {
         </div>
        
     </div>
+    
      {incomeModal &&
-        <div className='income-modal'>
-            <label>Enter Income: </label>
-            <input 
-                type='number'
-                onChange={(e)=>setnewIncome(e.target.value)}></input>
-            <button onClick={()=>handlesetIncome()}>Set</button>
-            <button onClick={()=>{setIncomeModal(false)}}>Cancel</button>
+        <div className="modal-overlay">
+            <div className='modal-container'>
+                <label>Enter Income: </label>
+                <input 
+                    type='number'
+                    onChange={(e)=>setnewIncome(e.target.value)}></input>
+                <button onClick={()=>handlesetIncome()}>Set</button>
+                <button onClick={()=>{setIncomeModal(false)}}>Cancel</button>
+            </div>
         </div>
         }
     </>

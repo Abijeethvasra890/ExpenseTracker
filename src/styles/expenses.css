@@ -1,22 +1,51 @@
-.basicInfo-container{
-    padding: 2px;
-    background-color: darkgray;
-    margin: 2px;
-}
 
-.title{
-    padding: 10px;
-    font-size: larger;
-    font-style: italic;
-}
-
-.content{
+.expenses-container {
     display: flex;
-    justify-content: space-around;
-    padding: 10px;
-    font-size: large;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust as needed */
+  }
+  
+  .expense-card {
+    width: calc(25% - 16px); /* Adjust as needed */
+    margin: 8px;
+    padding: 16px;
+    border: 1px solid #ddd; /* Add border for card */
+    box-sizing: border-box;
+  }
+
+  /* YourComponent.css */
+
+.expense-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.modal-overlay {
+
+.expense-card h4 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.expense-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Category-specific styles */
+.expense-card.expense {
+    background-color: #ffcccc; /* Red background for expense category */
+}
+
+.expense-card.savings {
+    background-color: #ccffcc; /* Green background for savings category */
+}
+
+
+
+  .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -67,5 +96,3 @@ button {
 
 
   
-
-
